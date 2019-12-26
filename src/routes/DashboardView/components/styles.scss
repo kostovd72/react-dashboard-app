@@ -1,0 +1,158 @@
+@import '../../../styles/_colors.scss';
+body{
+  background: $bgLightGray !important;
+  .DashboardView {
+    padding: 20px;
+    padding-bottom: 80px;
+    background: $bgLightGray;
+    &__Dialog{
+      z-index: 0 !important;
+      & > div:nth-child(2){
+        width: 50%;
+        left: 25%;
+        position: absolute;
+      }
+    }
+    &__AddModal{
+      &--formControl{
+        width: 100% !important;
+        margin-bottom: 10px !important;
+      }
+      &--ImageContainer{
+        border: solid 1px $lightGray;
+        margin-bottom: 20px;
+        .hidden{
+          display: none;
+        }
+        img{
+          border: solid 1px $lightGray;
+          padding: 10px;
+          margin: 10px;
+          &.active{
+            border: solid 1px $black;
+            box-shadow: 0px 0px 3px 4px rgba(0,0,0,0.4);
+          }
+        }
+      }
+      button{
+        float: right;
+      }
+    }
+    &__FilterModal{
+      padding: 20px;  
+      background-color: $red;
+      color: white;
+      width: 700px;
+      & .MuiGrid-item-325 {
+        border-right: 1px solid #eee;
+      }
+      & .MuiGrid-item-325:last-child {
+        border-right: none;
+      }
+      .Cross__Icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        svg {
+          cursor: pointer;
+        }
+      }
+      &__Grid__Wrapper {
+        background-color: green;
+      }
+      &--formControl{
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        padding: 20px;
+      }
+      &--ImageContainer{
+        border: solid 1px $lightGray;
+        margin-bottom: 20px;
+        .hidden{
+          display: none;
+        }
+        img{
+          border: solid 1px $lightGray;
+          padding: 10px;
+          margin: 10px;
+          &.active{
+            border: solid 1px $black;
+            box-shadow: 0px 0px 3px 4px rgba(0,0,0,0.4);
+          }
+        }
+      }
+      button{
+        float: right;
+        background-color:$black;
+        color: white;
+        margin-top: 20px;
+      }
+    }
+    &__logo {
+      width: 40rem;
+      margin: 10% auto 0;
+    }
+    &--top{
+      display: flex;
+      &--title, &--option{
+        flex-grow: 0.5;
+        &__input{
+          width: 100%;
+        }
+      }
+      button:first-child {
+        background-color: $red;
+        color: $white;
+      }
+    }
+    &--bottom{
+      text-align: right;
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      background: $white;
+      padding: 20px;
+      margin-left: -20px;
+    }
+    &--graph{
+      &--empty{
+        width: 400px;
+        height: 130px;
+        padding: 20px;
+        border: dotted 2px $black;
+        font-size: 40px;
+        display: flex;
+        margin: 100px auto;
+        justify-content: center;
+        align-items: center;
+      }
+      &--item{
+        padding: 20px !important;
+        position: relative;
+        height: 100%;
+        canvas{
+          max-height: 100% !important;
+          &[id]{
+            display: none !important;
+          }
+        }
+        &__container{
+          height: 90%;
+        }
+        &--setting{
+          position: absolute !important;
+          right: 0px;
+          top: 0px;
+        }
+        img{
+          position: absolute !important;
+          right: 30px;
+          bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+
