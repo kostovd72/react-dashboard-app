@@ -1,0 +1,76 @@
+@import '../../../styles/_colors.scss';
+.Dashboard {
+  padding: 20px;
+  background: $bgLightGray;
+  &__logo {
+    width: 40rem;
+    margin: 10% auto 0;
+  }
+  &--AddModal{
+    z-index: 0 !important;
+    & > div:nth-child(2){
+      width: 50%;
+    }
+    &--formControl{
+      width: 100% !important;
+      margin-bottom: 10px !important;
+    }
+    button{
+      float: right;
+    }
+  }
+  &--top{
+    display: flex;
+    &--btns{
+      &--btn{
+        margin-right: 20px !important;
+        color: $darkGray !important;
+        background: $white !important;
+        &--search-field{
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid rgba(black,.5) !important; // Add an !important for CodePen because it's adding inline styles when focused
+          box-sizing: border-box;
+          cursor: pointer;
+          font-weight: 300;
+          opacity: 0;
+          padding-right: 30px;
+          width: 0;
+          z-index: 3;
+          &:focus {
+            cursor: text;
+            opacity: 1;
+            outline: none;
+            width: 100%;
+            padding-right: 0px;
+            z-index: 1;
+          }
+        }
+        &--search-submit{
+          background-color: transparent;
+          border: none;
+          position: absolute;
+          right: 20px;
+          z-index: 2;
+        }
+      }
+    }
+    &--title, &--btns{
+      flex-grow: 0.5;
+    }
+  }
+  &--list{
+    padding: 20px !important;
+    border: solid 2px $bgDarkGray;
+    background: $white;
+    &__list-item{
+      border: solid 2px $bgDarkGray;
+      margin-bottom: 10px;
+    }
+    button{
+      margin-right: 20px;
+      text-transform: none !important;
+    }
+  }
+}
+

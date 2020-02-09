@@ -1,0 +1,42 @@
+@import '../../styles/colors';
+.Navbar{
+  color: $mediumGray !important;
+  background: $white !important;
+  button{
+    text-transform: none !important;
+  }
+  &--top{
+    background-color: #f6f6f6;
+    &--title{
+      &--main{
+        border-right: solid 2px #979797;
+        padding-right: 30px;
+        margin-right: 30px;
+      }
+      &--sub{
+        color: grey;
+      }
+    }
+    &--right{
+      border-left: solid 2px #979797;
+      button span{
+        font-size: 14px;
+        margin-left: 10px;
+      }
+    }
+  }
+  &--bottom{
+    height: 50px !important;
+    min-height: 50px !important;
+    &--left{
+      line-height: 10px;
+      border-right: solid 2px #979797;
+    }
+    a{
+      color: $mediumGray !important;
+    }
+  }
+}
+.grow{
+  flex-grow: 1;
+}

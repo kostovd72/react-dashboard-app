@@ -1,0 +1,36 @@
+@import '../../../styles/_colors.scss';
+.Dashboard {
+  padding: 20px;
+  background: $bgLightGray;
+  &__logo {
+    width: 40rem;
+    margin: 10% auto 0;
+  }
+  &--top{
+    display: flex;
+    &--btns{
+      &--btn{
+        margin-right: 20px !important;
+        color: $darkGray !important;
+        background: $white !important;
+      }
+    }
+    &--title, &--btns{
+      flex-grow: 0.5;
+    }
+  }
+  &--list{
+    padding: 20px !important;
+    border: solid 2px $bgDarkGray;
+    background: $white;
+    &__list-item{
+      border: solid 2px $bgDarkGray;
+      margin-bottom: 10px;
+    }
+    button{
+      margin-right: 20px;
+      text-transform: none !important;
+    }
+  }
+}
+
